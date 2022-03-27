@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- Se declara el tipo de documento con un lenguaje. -->
+<html lang="es">
+	<!-- Todas las páginas tienen un head donde se encuentra la codificación de caracteres, el ícono de la página, el título de la página, las fuentes que se van a utilizar y los archivos de estilo. -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bogotá | Habitantes</title>
+
+		<link rel="shortcut icon" href="icon.png?v=2" type="image/x-icon" />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<!-- Contenido de la página. -->
+	<body>
+		<!-- En el encabezado de la página se agrega un título con su icono y una barra de navegación con una lista de links a otras páginas. -->
+		<header>
+			<h1>
+				<a href="index.html">
+					<img src="images/bogotaletra.png" alt="logo Bogotá" />
+					Bogotá</a
+				>
+			</h1>
+
+			<input type="checkbox" id="menu" />
+			<label for="menu" class="menuIcon">
+				<img src="images/menu.png" alt="Menú" />
+			</label>
+
+			<!-- El link de la página actual tiene un identificador para estilizar. -->
+			<nav>
+				<ul>
+					<li><a href="location.html">Ubicación</a></li>
+					<li><a href="people.html" id="current">Habitantes</a></li>
+					<li><a href="activities.html">Actividades</a></li>
+					<li><a href="history.html">Historia</a></li>
+					<li><a href="interactive.html">Mapa interactivo</a></li>
+					<li><a href="references.html">Referencias</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Titulo para identificar el contenido de la página. -->
+		<h2>Habitantes</h2>
+
+		<!-- La sección tiene una descripción de los habitantes de Bogotá. -->
+		<section class="people">
+			<p>
+				La población nativa de Bogotá (bogotanos), está compuesta por dos
+				grandes grupos: los rolos y los cachacos, siendo los primeros
+				descendientes de personas no nativas de Bogotá y los segundos, hijos de
+				bogotanos. En Bogotá, el acelerado proceso de urbanización no se debe
+				exclusivamente a la industrialización, ya que hay complejas razones
+				políticas y sociales, como la pobreza y la violencia, que han motivado
+				la migración del campo a la ciudad a lo largo del siglo XX, determinando
+				un crecimiento exponencial de la población de Bogotá y el
+				establecimiento de cinturones de miseria en sus alrededores. Según la
+				Consultoría de Derechos Humanos, Codhes, en el período 1999-2005
+				llegaron a Bogotá más de 260.000 personas desplazadas, aproximadamente
+				el 3,8% de la población total de Bogotá. Los lugares donde se concentra
+				la mayoría de la población desplazada son Ciudad Bolívar, Kennedy, Bosa
+				y Usme. Por esta razón, los hijos de la población migrante nacida en
+				Bogotá (rolos) no suelen tener un sentido de pertenencia a la ciudad ni
+				una identidad cultural tan marcada como la de los cachacos. Sin embargo,
+				debido a la creciente aculturación de los rolos y a la disminución del
+				número de cachacos étnicos en Bogotá, la población de rolos tiende a ser
+				predominante en la ciudad.
+			</p>
+		</section>
+
+		<!-- La otra sección de la página tiene una galeria de imagenes con los habitantes de Bogotá. -->
+		<section class="gallery">
+			<img src="images/people/boyacense.jpg" alt="boyacense" />
+
+			<img src="images/people/cachaco.jpg" alt="cachaco" />
+
+			<img src="images/people/chocoano.jpg" alt="chocoano" />
+
+			<img src="images/people/costeño.jpg" alt="costeño" />
+
+			<img src="images/people/paisa.jpg" alt="viejitos" />
+
+			<img src="images/people/viejitos.jpg" alt="viejitos" />
+
+			<img src="images/people/septima.jpg" alt="carrera septima" />
+
+			<img
+				src="images/people/rolobolivar.png"
+				alt="Persona en plaza de Bolívar"
+			/>
+
+			<img
+				src="images/people/personas.jpeg"
+				alt="personas caminando en Bogotá"
+			/>
+
+			<img src="images/people/rolos.jpg" alt="rolos" />
+
+			<img
+				src="images/people/conduTrans.jpeg"
+				alt="Conductor de Transmilenio"
+			/>
+
+			<img src="images/people/universitarios.jpg" alt="universitarios" />
+
+			<img
+				src="images/people/personas-en-transmilenio.jpg"
+				alt="Personas en transmilenio"
+			/>
+
+			<img src="images/people/indigena.jpg" alt="indigena en Bogotá" />
+
+			<img src="images/people/estudiantes.png" alt="Estudiantes" />
+
+			<img src="images/people/ejercito.jpg" alt="militar en Bogotá" />
+
+			<img src="images/people/zonrosa.jpg" alt="personas en zona rosa" />
+
+			<img src="images/people/ninos.jpg" alt="Niños en Bogotá" />
+		</section>
+
+		<!-- El pie de página se agrega con la información del autor de la página. -->
+		<footer>
+			<a href="mailto:cychitivav@unal.edu.co">Cristian Yesid Chitiva Vela </a>
+			<time>2021</time>
+		</footer>
+	</body>
+</html>

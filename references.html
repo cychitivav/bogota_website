@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<!-- Se declara el tipo de documento con un lenguaje. -->
+<html lang="es">
+	<!-- Todas las páginas tienen un head donde se encuentra la codificación de caracteres, el ícono de la página, el título de la página, las fuentes que se van a utilizar y los archivos de estilo. -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bogotá</title>
+
+		<link rel="shortcut icon" href="icon.png?v=2" type="image/x-icon" />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<!-- Contenido de la página. -->
+	<body>
+		<!-- En el encabezado de la página se agrega un título con su icono y una barra de navegación con una lista de links a otras páginas. -->
+		<header>
+			<h1>
+				<a href="index.html">
+					<img src="images/bogotaletra.png" alt="logo Bogotá" />
+					Bogotá</a
+				>
+			</h1>
+
+			<input type="checkbox" id="menu" />
+			<label for="menu" class="menuIcon">
+				<img src="images/menu.png" alt="Menú" />
+			</label>
+
+			<!-- El link de la página actual tiene un identificador para estilizar. -->
+			<nav>
+				<ul>
+					<li><a href="location.html">Ubicación</a></li>
+					<li><a href="people.html">Habitantes</a></li>
+					<li><a href="activities.html">Actividades</a></li>
+					<li><a href="history.html">Historia</a></li>
+					<li><a href="interactive.html">Mapa interactivo</a></li>
+					<li><a href="references.html" id="current">Referencias</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Titulo para identificar el contenido de la página. -->
+		<h2>Referencias</h2>
+
+		<!-- Mapa de navegación de la página con su respectiva leyenda -->
+		<figure class="navMap">
+			<img src="images/mapNav.drawio.png" alt="Mapa de navegación"/>
+			<figcaption>Mapa de navegación</figcaption>
+		</figure>
+
+		<!-- La siguiente sección tiene una tabla indicando la información con su respectiva fuente. -->
+		<section class="references">
+			<table>
+				<!-- El encabezado de la tabla tiene una descripción de la información que se muestra en la tabla. -->
+				<tr>
+					<th>Nombre</th>
+					<th>Fuente</th>
+				</tr>
+				<!-- Cada columna es una fuente de información con su respectivo enlace. -->
+				<tr>
+					<td>Fondo Bogotá de noche</td>
+					<td>
+						<a
+							href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fapkpure.com%2Fes%2Fbogota-columbia-wallpapers%2Fimgs.free.fun.BogotaColumbia&psig=AOvVaw2uBd8dw2RyvxiumQHkWwhN&ust=1636429032715000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJj_p6zrh_QCFQAAAAAdAAAAABAD"
+						>
+							Enlace imagen
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>Descripción de Bogotá</td>
+					<td>
+						<a
+							href="https://aprende.colombiaaprende.edu.co/ckfinder/userfiles/files/Bogota.pdf"
+						>
+							Enlace descripción
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">Candelaria</td>
+					<td>
+						<a
+							href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.teahub.io%2Fviewwp%2FiomxoTT_colombia-bogota-la-candelaria-landscape-panoramic%2F&psig=AOvVaw18qnauT9oZakRprfqjQOCY&ust=1636429414805000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPjx8-Hsh_QCFQAAAAAdAAAAABAD"
+						>
+							Enlace imagen
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a
+							href="https://bogota.gov.co/mi-ciudad/localidades/la-candelaria#:~:text=%F0%9F%93%8C%20La%20Candelaria%20est%C3%A1%20en,y%20grande%20de%20la%20ciudad."
+						>
+							Enlace descripción
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">Monserrate</td>
+					<td>
+						<a
+							href="https://bogota.gov.co/mi-ciudad/cultura-recreacion-y-deporte/monserrate-religion-gastronomia-y-hermosa-panoramica-de-bogota#:~:text=Situado%20a%203.152%20metros%20de,por%20miles%20de%20peregrinos%20cat%C3%B3licos."
+						>
+							Enlace Descripción
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a
+							href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fe3%2Fc4%2Fa5%2Fe3c4a5e88d184b1c7c02610a7128e7bb.png&imgrefurl=https%3A%2F%2Ffi.pinterest.com%2Fpin%2F217017275782998933%2F&tbnid=hgBriGxhwM9AJM&vet=12ahUKEwjB2fWP8Yf0AhWEwikDHb90CDsQMygLegUIARDCAQ..i&docid=besMfRyFS9Q3xM&w=1000&h=666&itg=1&q=monserrate%20wallpaper&hl=es-419&ved=2ahUKEwjB2fWP8Yf0AhWEwikDHb90CDsQMygLegUIARDCAQ"
+						>
+							Enlace imagen
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">Parque Simón Bolívar</td>
+					<td>
+						<a
+							href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fbogota.gov.co%2Fmi-ciudad%2Fturismo%2Fparque-metropolitano-simon-bolivar-el-pulmon-de-bogota&psig=AOvVaw3qMscRgUFf_jlZ82pVqWNt&ust=1636430630458000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJC5qKvxh_QCFQAAAAAdAAAAABAD"
+						>
+							Enlace imagen
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a
+							href="https://es.wikipedia.org/wiki/Parque_Metropolitano_Sim%C3%B3n_Bol%C3%ADvar"
+						>
+							Enlace descripción
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">Plaza de Bolívar</td>
+					<td>
+						<a
+							href="https://colombia.travel/es/bogota/conoce-la-plaza-de-bolivar-en-bogota#:~:text=Ubicada%20en%20el%20centro%20de,20%20de%20julio%20de%201810."
+						>
+							Enlace descripción
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a
+							href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fmedia.gettyimages.com%2Fphotos%2Fbogota-colombia-the-catedral-primada-the-seat-of-the-roman-catholic-picture-id606712650%3Fs%3D612x612&imgrefurl=https%3A%2F%2Fwww.gettyimages.es%2Ffotos%2Fplaza-de-bol%25C3%25ADvar-bogot%25C3%25A1&tbnid=Gr_gtl4ID1GqUM&vet=12ahUKEwiy05Xn8Yf0AhXDCd8KHY5FDOcQMygBegUIARCzAQ..i&docid=gaEYUDwEhpQiYM&w=612&h=408&itg=1&q=wallpaper%20la%20plaza%20de%20bolivar&hl=es-419&ved=2ahUKEwiy05Xn8Yf0AhXDCd8KHY5FDOcQMygBegUIARCzAQ"
+						>
+							Enlace imagen
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">Biblioteca Virgilio Barco</td>
+					<td>
+						<a
+							href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F372884044126982017%2F&psig=AOvVaw3lVVlHwm3qI1tIQYkN0vH8&ust=1636430809177000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPj4yfvxh_QCFQAAAAAdAAAAABAD"
+						>
+							Enlace imagen
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a
+							href="https://www.metrocuadrado.com/noticias/actualidad/la-virgilio-barco-una-biblioteca-ubicada-en-una-zona-estrategica-2413#:~:text=La%20Biblioteca%20P%C3%BAblica%20Virgilio%20Barco,cargo%20del%20arquitecto%20Rogelio%20Salmona."
+						>
+							Enlace descripción
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>Icono Bogotá</td>
+					<td>
+						<a href="https://www.flaticon.es/icono-premium/bogota_3187588#">
+							Enlace
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>Descripción localidades de Bogotá</td>
+					<td>
+						<a
+							href="https://www.culturarecreacionydeporte.gov.co/es/bogotanitos/bogodatos/bogota-y-sus-localidades
+							"
+						>
+							Enlace
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>Ubicación de Bogotá</td>
+					<td>
+						<a
+							href="https://es.wikipedia.org/wiki/Geograf%C3%ADa_de_Bogot%C3%A1"
+						>
+							Enlace
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">Museo del oro</td>
+					<td>
+						<a
+							href="https://jwh.uniandes.edu.co/museo-del-oro/#:~:text=El%20Museo%20del%20Oro%20ubicado,los%20ritos%20de%20esas%20comunidades."
+						>
+							Enlace descripción
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a
+							href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.semana.com%2Fresizer%2FvCYiytaUKK--faKFW49fWQeoHzk%3D%2F1200x675%2Ffilters%3Aformat(jpg)%3Aquality(50)%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fsemana%2FAYR5DVA4KZFJPFXDQTRHMT6FOE.jpg&imgrefurl=https%3A%2F%2Fwww.semana.com%2Fcultura%2Farticulo%2Flos-75-del-museo-del-oro%2F409766-3%2F&tbnid=GBjDp1uDjRAMLM&vet=12ahUKEwjPjp7Z8of0AhUhh-AKHeCjDtUQMygcegUIARDpAQ..i&docid=JRBLMGCdPNQzaM&w=1200&h=675&itg=1&q=wallpaper%20museo%20del%20oro&hl=es-419&ved=2ahUKEwjPjp7Z8of0AhUhh-AKHeCjDtUQMygcegUIARDpAQ"
+						>
+							Enlace imagen
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">Chorro de Quevedo</td>
+					<td>
+						<a
+							href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F7%2F7f%2FChorro_quevedo.jpg&imgrefurl=https%3A%2F%2Fes.wikipedia.org%2Fwiki%2FChorro_de_Quevedo&tbnid=p3XFThzvEIJvVM&vet=12ahUKEwjR8azu8of0AhXDZt8KHQ4pCN8QMygAegUIARCtAQ..i&docid=g6RlDFJrP5qKWM&w=2048&h=1536&itg=1&q=wallpaper%20chorro%20de%20quevedo&hl=es-419&ved=2ahUKEwjR8azu8of0AhXDZt8KHQ4pCN8QMygAegUIARCtAQ"
+						>
+							Enlace imagen
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a
+							href="https://archivobogota.secretariageneral.gov.co/noticias/chorro-quevedo-la-maqueta-mito-pedestal-lienzo#:~:text=El%20Chorro%20de%20Quevedo%20es,mito%20fundacional%20de%20la%20ciudad.&text=El%20Chorro%2C%20como%20se%20le,y%20tur%C3%ADstico%20de%20la%20Candelaria."
+						>
+							Enlace descripción
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>Mapa de Bogotá</td>
+					<td>
+						<a
+							href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cerebriti.com%2Fjuegos-de-geografia%2Flocalidades-bogota&psig=AOvVaw1q9NK_mXn0HGZNu_wZLVcB&ust=1636431148020000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMi_lp_zh_QCFQAAAAAdAAAAABAD"
+						>
+							Enlace
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>Icono flecha</td>
+					<td>
+						<a
+							href="https://www.flaticon.es/icono-gratis/chevron-flecha-hacia-arriba_17507?term=flecha%20hacia%20arriba&page=1&position=1&page=1&position=1&related_id=17507&origin=search"
+						>
+							Enlace
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>Historia de Bogotá</td>
+					<td>
+						<a href="https://es.wikipedia.org/wiki/Historia_de_Bogot%C3%A1">
+							Enlace descripciones e imagenes
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>Habitantes de Bogotá</td>
+					<td>
+						<a
+							href="https://caracol.com.co/programa/2016/12/02/bogota_hoy_por_hoy/1480699328_538879.html#:~:text=Cachaco%20y%20Rolo%2C%20esas%20son,abuelos%20nacieron%20en%20la%20Capital."
+						>
+							Enlace
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">Feria del libro</td>
+					<td>
+						<a
+							href="https://es.wikipedia.org/wiki/Feria_Internacional_del_Libro_de_Bogot%C3%A1"
+						>
+							Enlace descripción
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a
+							href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.semana.com%2Fedicion-impresa%2Fnegocios%2Farticulo%2Fmetas-de-la-feria-del-libro-de-bogota-2018%2F256760%2F&psig=AOvVaw0W8NYHHKyiLRWjVv8UVit-&ust=1636431357486000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLjwgYf0h_QCFQAAAAAdAAAAABAD"
+						>
+							Enlace imagen
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">Festival de verano</td>
+					<td>
+						<a
+							href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.eltiempo.com%2Fbogota%2Fprogramacion-y-actividades-del-festival-de-verano-de-bogota-2019-392618&psig=AOvVaw21r5Os6eLbP_Oz8BJUjBUj&ust=1636431395555000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMCbsJP0h_QCFQAAAAAdAAAAABAD"
+						>
+							Enlace imagen
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="https://es.wikipedia.org/wiki/Festival_de_Verano">
+							Enlace descripción
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">Rock al parque</td>
+					<td>
+						<a href="https://es.wikipedia.org/wiki/Rock_al_Parque">
+							Enlace descripción
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a
+							href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fbogota.gov.co%2Fque-hacer%2Fcultura%2Fcontinua-la-celebracion-de-los-25-anos-de-rock-al-parque&psig=AOvVaw1i9g5M2xxW0jPOF22KPN8l&ust=1636431488691000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJiFh8X0h_QCFQAAAAAdAAAAABAD"
+						>
+							Enlace imagen
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">Estereo Picnic</td>
+					<td>
+						<a
+							href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.larepublica.co%2Focio%2Ffestival-estereo-picnic-anuncio-nuevas-fechas-para-el-ano-2021-debido-a-la-incertidumbre-por-pandemia-3055975&psig=AOvVaw0UJxHcIDwbVJKufRKAOX8e&ust=1636431550513000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCND-xd30h_QCFQAAAAAdAAAAABAD"
+						>
+							Enlace imagen
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a
+							href="https://es.wikipedia.org/wiki/Festival_Est%C3%A9reo_Picnic"
+						>
+							Enlace descripción
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>Bogotanos</td>
+					<td>
+						<a
+							href="https://www.gettyimages.es/fotos/bogotano?assettype=image&phrase=bogotano&sort=mostpopular&license=rf%2Crm"
+						>
+							Enlace
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>Actividades Bogotá</td>
+					<td>
+						<a
+							href="https://www.lancasterhouse.com.co/10-festivales-y-ferias-de-bogota/"
+						>
+							Enlace
+						</a>
+					</td>
+				</tr>
+			</table>
+		</section>
+
+		<!-- El pie de página se agrega con la información del autor de la página. -->
+		<footer>
+			<a href="mailto:cychitivav@unal.edu.co">Cristian Yesid Chitiva Vela </a>
+			<time>2021</time>
+		</footer>
+	</body>
+</html>

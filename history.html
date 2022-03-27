@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!-- Se declara el tipo de documento con un lenguaje. -->
+<html lang="es">
+	<!-- Todas las páginas tienen un head donde se encuentra la codificación de caracteres, el ícono de la página, el título de la página, las fuentes que se van a utilizar y los archivos de estilo. -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bogotá</title>
+
+		<link rel="shortcut icon" href="icon.png?v=2" type="image/x-icon" />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<!-- Contenido de la página. -->
+	<body>
+		<!-- En el encabezado de la página se agrega un título con su icono y una barra de navegación con una lista de links a otras páginas. -->
+		<header>
+			<h1>
+				<a href="index.html">
+					<img src="images/bogotaletra.png" alt="logo Bogotá" />
+					Bogotá</a
+				>
+			</h1>
+
+			<input type="checkbox" id="menu" />
+			<label for="menu" class="menuIcon">
+				<img src="images/menu.png" alt="Menú" />
+			</label>
+
+			<!-- El link de la página actual tiene un identificador para estilizar. -->
+			<nav>
+				<ul>
+					<li><a href="location.html">Ubicación</a></li>
+					<li><a href="people.html">Habitantes</a></li>
+					<li><a href="activities.html">Actividades</a></li>
+					<li><a href="history.html" id="current">Historia</a></li>
+					<li><a href="interactive.html">Mapa interactivo</a></li>
+					<li><a href="references.html">Referencias</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Titulo para identificar el contenido de la página. -->
+		<h2>Historia de Bogotá</h2>
+
+		<!-- Sección que funciona como linea de tiempo para la historia de Bogotá. -->
+		<section class="timeline">
+			<!-- Cada fecha importante tiene un título, una descripción y una imagen representativa. -->
+			<article class="date">
+				<!-- El texto se separa de la imagen con una etiqueta div. -->
+				<div class="timeDesc">
+					<h3>Periodo Muisca</h3>
+					<p>
+						Los muiscas llegaron en el siglo IX tras una migración de origen
+						chibcha, sobre cuyos orígenes se han propuesto diferentes teorías,
+						que se había mezclado con la población anterior. El territorio
+						ocupado por la confederación muisca se extendía, durante la
+						colonización española de América, del 4º al 6º de latitud boreal,
+						con un largo de 45 leguas y un ancho de 13 leguas en promedio. Su
+						superficie, por consiguiente, se aproximaba a las 600 leguas
+						cuadradas. La región fría, de una altitud de 2.000 a 3.000 msnm, se
+						hallaba en las cercanías de las regiones tibias limítrofes de
+						Fusagasugá, Pacho y Cáqueza.5​
+					</p>
+				</div>
+
+				<img src="images/history/HUNZAHUA.jpg" alt="indigena muisca" />
+			</article>
+
+			<article class="date">
+				<div class="timeDesc">
+					<h3>Conquista y Fundación</h3>
+					<p>
+						Gonzalo Jiménez de Quesada partió de Santa Marta el 6 de abril de
+						1536. Iba a la cabeza de quinientos infantes, entre ellos Gonzalo
+						Suárez Rendón, el fundador de Tunja, y con ochenta caballos, con el
+						fin de explorar las montañas de las riberas del río Magdalena.9 El
+						primer asentamiento al que llegaron fue a Tora de las Barrancas
+						Bermejas, actual Barrancabermeja, en donde tuvieron noticias de una
+						civilización que les llamó la atención debido al hallazgo de vasijas
+						con sal y mantas de algodón. Después de un año, ciento sesenta y
+						seis hombres y unos pocos caballos llegaron a las tierras habitadas
+						por el pueblo muisca.
+					</p>
+				</div>
+
+				<img
+					src="images/history/Don_Gonzalo_Jimenez_de_Quesada.jfif"
+					alt="Gonzalo Jiménez de Quesada"
+				/>
+			</article>
+
+			<article class="date">
+				<div class="timeDesc">
+					<h3>Época virreinal</h3>
+					<p>
+						Portada de la recopilación de las Actas de Cabildo tras su
+						desaparición de los registros originales. Durante el virreinato,
+						Bogotá rivalizó con Cartagena de Indias y Tunja por el primer puesto
+						en importancia del Nuevo Reino de Granada. Por Real Cédula del rey
+						Carlos I de España se elevó a Santa fe a la categoría de ciudad el
+						27 de julio de 1540. El cabildo de Santa fe ya había sido
+						establecido en 1539. En 1548 el rey otorgó las armas y divisas para
+						los estandartes, banderas, sellos y el escudo, que son: águila
+						negra, rampante y coronada, en campo de oro, con una granada abierta
+						en cada garra y por orla algunos ramos de oro en campo azul.
+					</p>
+				</div>
+
+				<img
+					src="images/history/Portada_transcripción_Libros_de_Cabildo_de_Santa_Fe_de_Bogotá_-_AHG.jpg"
+					alt="Cabildos Santa Fé de Bogotá"
+				/>
+			</article>
+
+			<article class="date">
+				<div class="timeDesc">
+					<h3>Siglo XVII</h3>
+					<p>
+						La primera mitad de este siglo fue el momento de mayor actividad
+						constructora de la Santafé colonial, que durante se consolidó
+						urbanamente. En total se desarrollaron dieciocho obras religiosas,
+						incluidos tres colegios, y seis civiles, entre ellas cuatro puentes.
+						Fue fundamental la mano de obra local, registrándose en 1602 ochenta
+						y ocho indígenas en varias obras públicas, entre las que se
+						encontraban la construcción del cabildo, la fuente de la plaza
+						mayor, la real audiencia, la carnicería, el empedrado de las calles,
+						la cárcel y el puente San Miguel que cruzaba el río San Francisco.2
+					</p>
+				</div>
+
+				<img
+					src="images/history/Iglesia_y_Recoleta_de_San_Diego_Bogotá.jpg"
+					alt="Iglesia y recoleta de San Diego, construida entre 1606 y 1610."
+				/>
+			</article>
+
+			<article class="date">
+				<div class="timeDesc">
+					<h3>Siglo XVIII</h3>
+					<p>
+						Durante la primera parte del siglo la construcción llegó a su punto
+						más bajo debido a las condiciones económicas adversas.​ Entre las
+						pocas obras que se realizaron se encuentra el reemplazo del hospital
+						de San Pedro por el de San Juan de Dios, cuya construcción se inició
+						en 1723 y se terminó hacia mediados de siglo, y la construcción de
+						la capilla de La Peña.​ En 1740 se instaló un reloj del francés M.
+						Antoine en la única torre de la catedral Primada. A mediados de
+						siglo, el regidor José Groot mandó empedrar algunas calles, entre
+						ellas la del costado oriental de la Plaza Mayor. Este proceso se
+						relaciona con la mejora del enlosado de la calle de San Juan de Dios
+						(actual calle Doce) y en general con la del resto de la malla vial
+						durante la administración de José Manuel de Ezpeleta.
+					</p>
+				</div>
+
+				<img
+					src="images/history/Vista_panorámica_de_la_ciudad_de_Santafé_de_Bogotá_(detalle)1772.jfif"
+					alt="Vista de Santafé de Bogotá (detalle), por José Aparicio Morato en 1772."
+				/>
+			</article>
+
+			<article class="date">
+				<div class="timeDesc">
+					<h3>Siglo XIX</h3>
+					<p>
+						Una devastadora epidemia de viruela se registró entre 1801 y
+						1802,43​ en la que murieron unos 5.000 habitantes, es decir un 13,7
+						% de la población bogotana, tan solo treinta años después de otra
+						epidemia de menores proporciones.4 En 1803 se inauguraron el
+						acueducto y la pila de San Victorino, cuya primera petición se había
+						realizado en 1680. La obra la diseñó el arquitecto capuchino Domingo
+						de Petrés y tomaba sus aguas del río Arzobispo, canalizado hasta el
+						sector de San Diego. El mismo año se concluyó la construcción del
+						Observatorio Astronómico, el cual fue el primero en América, y que
+						contó con el patrocinio de José Celestino Mutis, quien además diseñó
+						los planos y asumió el costo de la obra. De Petrés realizó a su vez
+						en esa época importantes trabajos de ampliación del hospital y de la
+						iglesia de San Juan de Dios, entre ellos su sacristía.
+					</p>
+				</div>
+
+				<img
+					src="images/history/Calle_real_de_Bogotá_en_1869_dibujo_de_Therond.jpg"
+					alt="Calle Real, hoy carrera Séptima de Bogotá en 1869."
+				/>
+			</article>
+
+			<article class="date">
+				<div class="timeDesc">
+					<h3>Siglo XX</h3>
+					<p>
+						La entrada de Bogotá al siglo XX estuvo marcada por la guerra de los
+						Mil Días, que tuvo entre sus consecuencias la separación de Panamá
+						en 1903, lo mismo que notables cambios demográficos que favorecieron
+						la urbanización del país. Los 25 millones de dólares recibidos de
+						Estados Unidos como indemnización por la pérdida de ese territorio,
+						constituyeron unos ingresos extra que dieron lugar al periodo
+						conocido como de la "Danza de los millones" o de la "Prosperidad al
+						debe", que pese a la corrupción y el despilfarro, sirvió para
+						aportar algunas soluciones a ciertos de los atrasos en
+						infraestructura urbana. Paulatinamente, a principios de este periodo
+						Bogotá accedió al contexto internacional, consolidándose como centro
+						financiero, político, económico y demográfico del país.
+					</p>
+				</div>
+
+				<img
+					src="images/history/Cascada_Parque_Simón_Bolívar.jfif"
+					alt="En 1968 se inauguró el Parque Metropolitano Simón Bolívar."
+				/>
+			</article>
+
+			<article class="date">
+				<div class="timeDesc">
+					<h3>Siglo XXI</h3>
+					<p>
+						En 2001 abrió sus puertas la Biblioteca Virgilio Barco en el parque
+						Simón Bolívar, se inauguró el Parque Tercer Milenio en los antiguos
+						terrenos de El Cartucho en el barrio Santa Inés, y el Estadio
+						Nemesio Camacho El Campín albergó la final de la Copa América 2001,
+						en la cual la selección de fútbol de Colombia se coronó campeona
+						venciendo a la de México por un gol a cero. En 2002 abrió su puertas
+						la Biblioteca El Tintal del arquitecto Daniel Bermúdez, y se
+						terminaron las obras del Eje Ambiental, de los arquitectos Luis
+						Kopec y Rogelio Salmona, quien también diseñó el Centro Cultural
+						Gabriel García Márquez, inaugurado en 2008 en la localidad de La
+						Candelaria. En 2003 Luis Eduardo Garzón gana las elecciones para el
+						periodo 2004-2007 y forma la primera administración de tendencia
+						cercana a la socialista que ha conocido la ciudad en toda su
+						historia.
+					</p>
+				</div>
+
+				<img
+					src="images/history/Edificio_Avianca_desde_el_eje_Ambiental.jfif"
+					alt="Bus del sistema Transmilenio en el Eje Ambiental en la primera línea de la red."
+				/>
+			</article>
+		</section>
+		
+		<!-- El pie de página se agrega con la información del autor de la página. -->
+		<footer>
+			<a href="mailto:cychitivav@unal.edu.co">Cristian Yesid Chitiva Vela </a>
+			<time>2021</time>
+		</footer>
+	</body>
+</html>

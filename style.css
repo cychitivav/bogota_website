@@ -1,0 +1,1301 @@
+/* Primero se quitan algunos estilos por defecto de los navegadores*/
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "Oswald", sans-serif;
+	font-weight: 600;
+	color: #fff;
+}
+
+/* Se quita el subrayado y color de los links */
+a {
+	text-decoration: none;
+}
+
+/* Se utiliza el modelo de flexbox y se pone una imagen de fondo con una suave animación que cambia la posición de la imagen */
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	overflow-x: hidden;
+	background-image: url("images/bogotaBackground.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	animation: moveBackground 60s infinite;
+}
+
+/* Se configuran las barras de desplazamiento de todo el sitio con color, ancho, radio del borde y margen */
+::-webkit-scrollbar {
+	height: 1.2vh;
+	width: 1.2vh;
+}
+
+::-webkit-scrollbar-track-piece {
+	margin: 0 10vw;
+	background-color: #afafaf94;
+	border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #28454d;
+	border-radius: 20px;
+}
+
+/* A todos los encabezados se les pone un relleno y un color de fondo en gradiente para diferenciar la barra de navegación de los demás elementos */
+header {
+	display: flex;
+	padding: 1% 5%;
+	flex: 0 1 max-content;
+	align-items: center;
+	background: linear-gradient(
+		-45deg,
+		rgba(0, 0, 0, 0.25) 65%,
+		rgba(0, 0, 0, 0) 70%,
+		rgba(153, 153, 153, 0)
+	);
+}
+
+/* Para los objetos de la barra de navegación se configura el estilo de la fuente y una sombra para mejorar la legibilidad de los textos. */
+header h1 {
+	font-size: 2.5vw;
+	text-transform: capitalize;
+	flex-grow: 1;
+}
+
+header h1 a {
+	font-weight: 800;
+	text-shadow: 3px 3px 4px #000;
+	display: flex;
+	align-items: center;
+	width: min-content;
+}
+
+/* Se aplica un filtro en el logo y se configura la altura */
+header h1 a img {
+	height: 3.5vw;
+	margin-right: 10px;
+	filter: invert(100%);
+}
+
+/* Se configura la barra de navegación para eliminar las viñetas de la lista de navegación. */
+nav {
+	flex-grow: 2;
+	display: flex;
+	align-items: center;
+	margin: 0;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	flex-grow: 1;
+	justify-content: flex-end;
+}
+
+nav ul li {
+	margin: 0 1vw;
+}
+
+nav ul li a {
+	font-weight: 300;
+	font-size: 1.3vw;
+	text-shadow: 1px 1px 2px #000;
+	padding: 0.1vh 1vw;
+}
+
+header .menuIcon,
+header #menu {
+	display: none;
+}
+
+/* Cuando la página de la barra de navegación es seleccionada el link cambia de color de fondo */
+a#current {
+	border-radius: 1vw;
+	background-color: #ffffff;
+	color: black;
+}
+
+/* Todas las secciones expanden su tamaño para que se vea el contenido */
+section {
+	flex-grow: 1;
+}
+
+/* Todos los títulos de segundo orden de las paginas se estilizan para que sean iguales. */
+h2 {
+	text-align: center;
+	font-size: 3vw;
+	text-shadow: 3px 3px 4px #000;
+	padding: 3vh 0;
+}
+
+/*La sección de clase city utiliza el modelo de caja y se configuran las margenes y el relleno, además de la alineación y la medición de los elementos a partir del tamaño de su contenido  los bordes. */
+section.city {
+	display: flex;
+	align-items: center;
+	padding: 30px 0;
+	min-height: 70vh;
+	box-sizing: border-box;
+}
+
+/* La descripción de la ciudad es un flexbox con un ancho minimo de 50vw. */
+.cityDesc {
+	display: flex;
+	flex-direction: column;
+	flex: 5 0 50vw;
+	margin: 0 2vw 0 0;
+	font-size: 1.5vw;
+}
+
+/* Se configura el relleno, margen y color de los textos */
+.cityText {
+	background-color: rgba(0, 0, 0, 0.4);
+	padding: 5vh 2vw 5vh 6vw;
+	border-radius: 0 20px 20px 0;
+	text-shadow: 2px 2px 3px #000;
+}
+
+/* El link que lleva a la pagina de Bogotá se estiliza como botón. */
+.cityDesc a {
+	font-size: 1.5vw;
+	font-style: italic;
+	padding: 1.2vw;
+	margin: 2vh auto 2vh 6vw;
+	width: max-content;
+	border-radius: 1.5vw;
+	text-shadow: none;
+	background-color: #3498db;
+	box-shadow: 3px 3px #34495e;
+}
+
+/* Cuando el link es presionado simula una animación como si fuera un boton eliminado la sombra y trasladandolo pocos pixels. */
+.cityDesc a:active {
+	transform: translate(3px, 3px);
+	box-shadow: none;
+}
+
+/* Se estiliza la galeria de lugares de Bogotá con margenes y ocultando el contenido saliente de la pantalla con una barra de desplazamiento. */
+.cityPlaces {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	overflow-x: scroll;
+	margin: 0 6vw 0 2vw;
+	max-width: 50vw;
+}
+
+/* Para cada lugar destacado de la ciudad se estiliza el texto y se configura un ancho minimo. También se agrega una animación inicial de 2s para indicar que el contenido se puede desplazar. Se agrega una transición para suavizar el cambio de tamaño cuando se mantenga el mouse por encima del elemento.*/
+.cityPlace {
+	display: flex;
+	flex: 1 0 15vw;
+	margin: 3%;
+	text-align: right;
+	border-radius: 1vw;
+	box-shadow: 3px 3px 4px rgb(0, 0, 0);
+	flex-direction: column;
+	height: 50vh;
+	max-height: 460px;
+	overflow: hidden;
+	justify-content: flex-start;
+	transition: height 0.5s;
+	animation: movePlaces 2s ease;
+}
+
+/* En el último lugar se agrega un margen para que el contenido no se vea cortado cuando se ponga el mouse encima del elemento. */
+.cityPlace:last-child {
+	margin-right: 5vw;
+}
+
+/* Cuando se deja el mouse encima del elemento se agrega una animación para que el contenido se haga más grande. */
+.cityPlace:hover {
+	flex: 1 0 18vw;
+	border-radius: 2vw;
+	height: 65vh;
+}
+
+/* Los textos del lugar se estilizan y se desplazan por fuera del elemento para ocultar el contenido. */
+.cityPlace h3 {
+	font-size: 1.8vw;
+	padding: 2vh 2vw;
+	text-shadow: 3px 4px 2px #000;
+	transform: translateY(36vh);
+	transition: transform 0.5s;
+}
+
+.cityPlace p {
+	font-size: 1.1vw;
+	padding: 5vh 2vw;
+	transform: translateY(36vh);
+	transition: transform 0.5s;
+	height: 50vh;
+}
+
+/* Cuando se deja el mouse encima se hace visible el contenido y cambia de color para resaltar con el nuevo color de fondo. */
+.cityPlace:hover p,
+.cityPlace:hover h3 {
+	background-color: rgba(255, 255, 255, 0.7);
+	color: rgb(58, 58, 58);
+	transform: translateY(8vh);
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.37);
+}
+
+/* Para cada lugar se configura una imagen de fondo */
+.candelaria {
+	background-image: url(images/candelaria.jpg);
+	background-size: cover;
+}
+
+.monserrate {
+	background-image: url(images/monserrate.png);
+	background-size: cover;
+	background-position: bottom;
+}
+
+.pSimonBolivar {
+	background-image: url(images/simonbolivar.jpg);
+	background-size: cover;
+	background-position: bottom;
+}
+
+.plazaBolivar {
+	background-image: url(images/plazaBolivar.jpg);
+	background-size: cover;
+	background-position: -150px;
+}
+
+.BVirgilio {
+	background-image: url(images/bVirgilio.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.museoOro {
+	background-image: url(images/museoOro.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.chorroQuevedo {
+	background-image: url(images/chorroQuevedo.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+/* Al igual que otras secciones se utiliza el modelo flexbox para organizar los elementos. */
+section.people {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Los parrafos de la sección de habitantes se estilizan y contrastan con un color de fondo. */
+section.people p {
+	font-size: 1.3vw;
+	color: rgb(29, 29, 29);
+	text-shadow: 1px 1px 2px rgb(73, 73, 73);
+	margin: 0 10%;
+	padding: 5vh 3vw;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 1vw 1vw 0 0;
+	text-align: center;
+}
+
+/* Un conjunto de imagenes de habitantes de Bogotá se disponen en un contenedor tipo flexbox con saltos de linea(wrap). */
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	background: #ffffffe1;
+	padding: 0 10%;
+}
+
+/* Todas las imagenes de la galeria tienen el mismo alto y se separan un poco con la margen. */
+.gallery img {
+	height: 25vh;
+	margin: 0.5%;
+}
+
+/* Como para otras secciones se utiliza el modelo flexbox para organizar los elementos. */
+section.location {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Se estilizan los textos de la sección de ubicación. */
+.location p {
+	flex: 1 1 30vw;
+	font-size: 1.4vw;
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 5vh 2vw 5vh 10%;
+	border-radius: 0 1vw 1vw 0;
+	color: rgb(29, 29, 29);
+	text-shadow: 1px 1px 2px rgb(73, 73, 73);
+}
+
+/* Se configura una variable de ancho para mantener la relación de aspecto del mapa de Bogotá además de establecer una posición relativa para ubicar cada localidad respecto al mapa. */
+.map {
+	--widthMap: 50vw;
+	flex: 0 0 var(--widthMap);
+	height: calc(var(--widthMap) * 1100 / 1600);
+	max-height: calc(var(--widthMap) * 1100 / 1600);
+	position: relative;
+	overflow: visible;
+	margin: 4vw;
+}
+
+/* Todos las localidades se ubican en el mapa de Bogotá con una posición absoluta. */
+.map .mapBarrio {
+	position: absolute;
+}
+
+/* Cuando se pone el mouse por encima del elemento la imagen cambia de color con el filtro y se hace más grande. */
+.map .mapBarrio img:hover {
+	transform: scale(1.1);
+	z-index: 1;
+	filter: hue-rotate(0deg);
+}
+
+/* Cada imagen de la localidad se hace del ancho de su contenedor y se aplica un filtro de color. */
+.map .mapBarrio img {
+	width: 100%;
+	filter: hue-rotate(190deg);
+}
+
+/* Cada localidad se ubica respecto al mapa y su tamaño en pixels. */
+#mapaUsaquen {
+	width: calc(615 / 1600 * 100%);
+	top: 0;
+	left: 0;
+}
+
+#mapaSuba {
+	width: calc(515 / 1600 * 100%);
+	top: 17.2%;
+	left: 2.5%;
+}
+
+#mapaChapinero {
+	width: calc(326 / 1600 * 100%);
+	top: 14%;
+	left: 34.4%;
+}
+
+#mapaBarriosUnidos {
+	width: calc(212 / 1600 * 100%);
+	top: 25%;
+	left: 32.7%;
+}
+
+#mapaTeusaquillo {
+	width: calc(271 / 1600 * 100%);
+	top: 28%;
+	left: 38.8%;
+}
+
+#mapaSantaFe {
+	width: calc(272 / 1600 * 100%);
+	top: 23%;
+	left: 54.2%;
+}
+
+#mapaCandelaria {
+	width: calc(124 / 1600 * 100%);
+	top: 24%;
+	left: 60.5%;
+}
+
+#mapaMartires {
+	width: calc(175 / 1600 * 100%);
+	top: 32%;
+	left: 55%;
+}
+
+#mapaPteAranda {
+	width: calc(279 / 1600 * 100%);
+	top: 38.5%;
+	left: 48.6%;
+}
+
+#mapaFontibon {
+	width: calc(420 / 1600 * 100%);
+	top: 44%;
+	left: 25%;
+	z-index: 3;
+}
+
+#mapaEngativa {
+	width: calc(464 / 1600 * 100%);
+	top: 36%;
+	left: 16%;
+	z-index: 2;
+}
+
+#mapaKennedy {
+	width: calc(343 / 1600 * 100%);
+	top: 56%;
+	left: 43.7%;
+}
+
+#mapaBosa {
+	width: calc(247 / 1600 * 100%);
+	top: 71%;
+	left: 50.2%;
+}
+
+#mapaAntonioNarino {
+	width: calc(130 / 1600 * 100%);
+	top: 40%;
+	left: 62.7%;
+}
+
+#mapaRafaelUribe {
+	width: calc(237 / 1600 * 100%);
+	top: 44.6%;
+	left: 67%;
+}
+
+#mapaTunjuelito {
+	width: calc(315 / 1600 * 100%);
+	top: 56%;
+	left: 64.5%;
+	z-index: 2;
+}
+
+#mapaCiudadBolivar {
+	width: calc(381 / 1600 * 100%);
+	top: 56%;
+	left: 64.2%;
+}
+
+#mapaSanCristobal {
+	width: calc(381 / 1600 * 100%);
+	top: 27.5%;
+	left: 66.6%;
+}
+
+#mapaUsme {
+	width: calc(434 / 1600 * 100%);
+	top: 34.6%;
+	left: 76%;
+}
+
+#mapaSumapaz {
+	width: calc(93 / 1600 * 100%);
+	top: 33%;
+	left: 97.5%;
+}
+
+/* Se pone un color de fondo pra resaltar el texto de la sección y un borde estilizado. */
+section.localitiesDesc {
+	margin: 5vh 10%;
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 0 5vw;
+	border-radius: 2vw;
+}
+
+/* Se estilizan los textos y la lista de localidades. */
+section.localitiesDesc ol li {
+	color: rgb(29, 29, 29);
+	text-shadow: 1px 1px 2px rgb(73, 73, 73);
+	margin: 2vh 0;
+	font-size: 1.8vw;
+}
+
+section.localitiesDesc ol li h3 {
+	font-size: 1.6vw;
+	color: rgb(19, 19, 19);
+	text-shadow: 1px 1px 2px rgb(73, 73, 73);
+}
+
+section.localitiesDesc ol li p {
+	font-size: 1.3vw;
+	font-weight: 400;
+	color: rgb(49, 49, 49);
+	text-shadow: none;
+	text-align: justify;
+}
+
+/* Se ubica el boton para volver al inicio en la esquina inferior derecha utilizando una posición fija y estilizando el texto. */
+a.buttonUp {
+	display: flex;
+	position: fixed;
+	top: 90vh;
+	left: 88vw;
+	align-items: center;
+	background-color: #fff;
+	color: rgb(49, 49, 49);
+	padding: 0.5vh 1vw;
+	border-radius: 30px;
+	width: max-content;
+}
+
+a.buttonUp span {
+	color: rgb(49, 49, 49);
+	font-size: 1.1vw;
+}
+
+/* Se configura el tamaño del icono del boton. */
+a.buttonUp img {
+	height: 2em;
+	margin-left: 2px;
+}
+
+/* Se estiliza el texto resumen de las actividades de Bogotá */
+section.activitySummary p {
+	font-size: 1.5vw;
+	color: rgb(29, 29, 29);
+	text-shadow: 1px 1px 2px rgb(73, 73, 73);
+	margin: 0 10% 10vh;
+	padding: 2vw;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 1vw;
+	text-align: center;
+}
+
+/* Se utiliza el modelo de flexbox para cada actividad. */
+article.activity {
+	display: flex;
+}
+
+/* Se estilizan los textos para que ocupen un máximo del 35% del ancho de la ventana. */
+article.activity .textActi {
+	flex: 1 0 35vw;
+	background-color: rgba(255, 255, 255, 0.9);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-shadow: 1px 1px 2px rgb(73, 73, 73);
+}
+
+/* Se configura el relleno la margen y la dirección del flexbox si el elemento es par o impar y se vayan intercalando en la página. */
+article.activity:nth-child(odd) {
+	flex-direction: row;
+}
+
+article.activity:nth-child(odd) .textActi {
+	padding: 2vh 5vw 2vh 10%;
+}
+
+article.activity:nth-child(even) {
+	flex-direction: row-reverse;
+}
+
+article.activity:nth-child(even) .textActi {
+	padding: 2vh 10% 2vh 5vw;
+}
+
+/* Se estiliza el texto de cada actividad. */
+.textActi h4 {
+	font-size: 2.5vw;
+	color: rgb(29, 29, 29);
+	padding: 1vh 0;
+}
+
+.textActi p {
+	font-size: 1.5vw;
+	font-weight: 400;
+	color: rgb(29, 29, 29);
+	text-align: center;
+}
+
+/* La imagen de cada actividad crece para que se vea mejor en la pantalla. */
+article.activity img {
+	flex-grow: 1;
+	width: 52vw;
+}
+
+/* Para hacer un contenido deslizante se utiliza scroll y el modelo flexbox */
+section.timeline {
+	display: flex;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	padding-bottom: 2vh;
+}
+
+/* Si se deja el mouse por encima de la sección la animación de las fechas se pausa. */
+.timeline:hover .date {
+	animation: step-end;
+}
+
+/* Se configura unas dimensiones minimas y maximas para que el contenido no se desborde de la ventana. También se agrega una animación. */
+.timeline .date {
+	display: flex;
+	box-sizing: border-box;
+	min-width: 100vw;
+	min-height: 60vh;
+	max-height: 90vh;
+	padding: 0 10%;
+	margin: 0;
+	animation: moveDates 100s;
+	background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Se estilizan las imagenes para que mantengan un mismo formato. */
+.date img {
+	padding: 2vw;
+	height: 90%;
+	border-radius: 7vh;
+}
+
+/* La descripción de cada epoca tiene un ancho de 50vw y un sombreado para resaltar. */
+.date .timeDesc {
+	display: flex;
+	flex: 1 0 50vh;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+	text-shadow: 1px 1px 2px rgb(73, 73, 73);
+	margin-right: 2vw;
+	padding-bottom: 2vh;
+}
+
+/* Se estilizan los textos con diferente tamaño de fuente. */
+.timeDesc h3 {
+	font-size: 3vw;
+	color: rgb(29, 29, 29);
+	padding: 2vh;
+}
+
+.timeDesc p {
+	font-size: 1.3vw;
+	font-weight: 400;
+	color: rgb(88, 88, 88);
+	text-align: right;
+	width: 40vw;
+	padding: 2vh;
+}
+
+/* Se agrega un estilo a la sección para dar profundidad al mapa */
+section#interactive {
+	flex-grow: 1;
+	display: flex;
+	text-align: center;
+	position: relative;
+	margin: 2vh auto;
+	background: radial-gradient(
+		circle at center,
+		#000000e5 0,
+		#474747c0 50%,
+		rgba(255, 255, 255, 0.616) 100%
+	);
+	border-radius: 1vw;
+	width: 95vw;
+	min-height: 790px;
+	overflow: hidden;
+}
+
+/* Para que el mapa no se corte se configura un ancho mínimo */
+#interactive svg {
+	min-width: 432px;
+}
+
+
+/* A cada localidad se agrega un color y cuando se pase el mouse por encima también se cambia el color y el ancho de la línea de borde.*/
+#interactiveMap #Localidades path {
+	fill: #ffd28b;
+	stroke: #646464;
+	stroke-width: 0.5;
+	display: inline;
+}
+
+#interactiveMap #Localidades path:hover {
+	fill: #460000;
+	stroke-width: 1;
+}
+
+
+/* Se ubica el formulario en una esquina y se agregan estilos a sus texxtos */
+#interactive form {
+	background-color: #ffffffe5;
+	padding: 1vh;
+	text-align: left;
+	border-radius: 1vw;
+	position: absolute;
+	top: 5vh;
+	left: 5vw;
+}
+
+#interactive form h3 {
+	color: rgb(0, 0, 0);
+	text-shadow: 1px 1px 2px rgb(73, 73, 73);
+}
+
+#interactive form label {
+	color: rgb(29, 29, 29);
+	text-shadow: 1px 1px 2px rgb(73, 73, 73);
+}
+
+/* Se ubican las imágenes con una posición absoluta y se configuran anchos para la imagen */
+#interactive figure  {
+	width: min-content;
+	position: absolute;
+	left: calc(65vw);
+	top: 2vh;
+	background-color: #ffffffe5;
+	padding: 1vh;
+	border-radius: 1vw;
+	display: none;
+}
+
+
+#interactive figure img {
+	max-width: 400px;
+	min-width: 200px;
+	width: 25vw;
+}
+#interactive figure figcaption {
+	color: rgb(29, 29, 29);
+	text-shadow: 1px 1px 2px rgb(73, 73, 73);
+}
+
+/* Se centra el contenido de la sección. */
+.references {
+	margin: 0 auto;
+}
+
+/* Se agrega un color de fondo, un ancho y un radio de borde. */
+.references table {
+	background-color: #2c3e50;
+	border-radius: 1vw;
+	width: 70vw;
+}
+
+/* Se estilizan los títulos diferentes de la tabla. */
+.references th {
+	text-align: center;
+	font-size: 1.8vw;
+	font-weight: 800;
+	color: rgb(185, 185, 185);
+	background-color: #2c3e50;
+	margin: 0;
+}
+
+/* Seleccionando el primer y ultimo hijo de los encabezados se hace compatible el radio del borde de la tabla. */
+.references tr:first-child th:first-child {
+	border-radius: 1vw 0 0 0;
+}
+
+.references tr:first-child th:last-child {
+	border-radius: 0 1vw 0 0;
+}
+
+/* Se estilizan los textos de cada celda de la tabla. */
+.references td {
+	text-align: center;
+	font-size: 1.2vw;
+	font-weight: 400;
+	color: rgb(88, 88, 88);
+}
+
+/* Los links se estilizan diferente para identificarlos más fácil. */
+.references td a {
+	color: rgb(24, 15, 109);
+	text-decoration: underline;
+}
+
+/* Cada columna se cambia de color de fondo. */
+.references table tr {
+	background-color: rgba(255, 255, 255, 0.9);
+	border: 2px solid rgb(0, 0, 0);
+}
+
+/* Seleccionando el primer y ultimo hijo de las filas se hace compatible el radio del borde de la tabla. */
+.references tr:last-child td:first-child {
+	border-radius: 0 0 0 1vw;
+}
+
+.references tr:last-child td:last-child {
+	border-radius: 0 0 1vw 0;
+}
+
+.navMap {
+	text-align: center;
+	margin: 0 10% 10vh;
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 1vw;
+}
+
+.navMap img {
+	width: 90%;
+	margin-top: 2vh;
+}
+
+.navMap figcaption {
+	font-size: 2vw;
+	text-align: center;
+	color: #000;
+	text-shadow: 1px 1px 2px rgba(160, 160, 160, 0.945);
+}
+
+/* Cada animación se configura con estados declarados en porcentajes. */
+/* Esta animación mueve el fondo lentamente. */
+@keyframes moveBackground {
+	0% {
+		background-position: top;
+	}
+	50% {
+		background-position: bottom;
+	}
+	100% {
+		background-position: top;
+	}
+}
+
+/* Esta animación mueve rapidamente los lugares para indicar contenido deslizante. */
+@keyframes movePlaces {
+	0% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(-500%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+/* Esta animación mueve lentamente la linea de tiempo para observar cada momento de la historia de Bogotá. */
+@keyframes moveDates {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-300%);
+	}
+}
+
+/* Todas las páginas tienen un pie de página indicando el autor y ajustando el contenido al máximo ocupado por los textos. */
+footer {
+	display: flex;
+	flex: 0 1 max-content;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: flex-end;
+	text-shadow: 1px 1px 2px #000;
+	padding: 0 0.5vw;
+	background: #2c3e5000;
+}
+
+/* Para pantallas menores a 1200px */
+@media only screen and (max-width: 1200px) {
+	/* Se cambia el tamaño de la fuente y la iamgen del encabezado */
+	header h1 {
+		font-size: 4vw;
+		/* Para diminuir el espacio de la barra de navegación, el titulo se hace más grande. */
+		width: 60vw;
+	}
+	header h1 a img {
+		height: 6vw;
+	}
+
+	/* Se permite que la barra de navegación tenga salto de linea. */
+	header nav ul {
+		flex-wrap: wrap;
+	}
+
+	/* Se cambian las fuentes de la barra de navegación. */
+	header nav ul li {
+		margin: 1vw;
+	}
+
+	header nav ul li a {
+		font-size: 2vw;
+	}
+
+	/* Se cambia el tamaño de la fuente de los textos de la página de inicio. */
+	.cityDesc {
+		flex: 2 0 60vw;
+		font-size: 2.1vw;
+	}
+
+	.cityDesc a {
+		font-size: 2.1vw;
+		margin: 2vh auto;
+	}
+
+	/* Los banner de los sitios turisticos se hacen más grandes para llamar la atención y se cambia la fuente. */
+	.cityPlace {
+		flex: 1 0 23vw;
+		height: 70vh;
+	}
+
+	/* También se modifica el desplazamiento para ocultar textos. */
+	.cityPlace h3 {
+		font-size: 2.5vw;
+		transform: translateY(40vh);
+	}
+
+	.cityPlace p {
+		font-size: 1.5vw;
+		transform: translateY(40vh);
+	}
+
+	/* Se cambia el tamaño de la fuente de los textos de la ubicación y se hace más graned el mapa. */
+	section.location p {
+		padding-left: 5%;
+		font-size: 1.8vw;
+		text-align: justify;
+	}
+
+	.map {
+		--widthMap: 60vw;
+	}
+
+	section.localitiesDesc ol li h3 {
+		font-size: 2vw;
+	}
+
+	section.localitiesDesc ol li p {
+		font-size: 1.5vw;
+	}
+
+	/* Se cambia el tamaño de la fuente de los textos de la página de habitantes. */
+	section.people p {
+		text-shadow: none;
+		font-size: 1.7vw;
+	}
+
+	/* Los bordes de la galeria se quitan para poner más imagenes. */
+	.gallery {
+		padding: 0%;
+	}
+
+	/* Se cambia el tamaño de la fuente de los textos de la página de referencias y la de historia. */
+	.references th {
+		font-size: 2.1vw;
+	}
+
+	.references td {
+		font-size: 1.6vw;
+	}
+
+	.timeDesc p {
+		font-size: 1.8vw;
+		text-shadow: none;
+	}
+
+	#interactive figure  {
+		left: calc(60vw);
+	}
+}
+
+/* Para pantallas de dispositivos móviles */
+@media only screen and (max-width: 600px) {
+	#interactive figure  {
+		width: min-content;
+		position: absolute;
+		left: calc(30vw);
+	}
+	/* Se cambia el estilo del encabezado para que tenga un fondo completamente translucido. */
+	header {
+		background: linear-gradient(
+			-45deg,
+			rgba(0, 0, 0, 0.11),
+			rgba(0, 0, 0, 0.527)
+		);
+	}
+
+	/* Se cambian las fuentes y el tamaño del icono de inicio. */
+	header h1 {
+		font-size: 10vw;
+	}
+	header h1 a img {
+		height: 12vw;
+	}
+
+	/* El icono de menu se hace visible y se cambia el orden para poder ubicarlo al final del encabezado y seleccionar con + el menu de navegación.  */
+	header .menuIcon {
+		display: inline-block;
+		order: 3;
+		flex-grow: 0;
+	}
+
+	/* Se invierte el color de la imagen para que se vea en blanco. */
+	header .menuIcon img {
+		padding: 2vw;
+		height: 8vw;
+		filter: invert(100%);
+	}
+
+	/* Se desplaza la barra de navegación por fuera de la pantalla pero que sea del mismo alto del viewport. */
+	header nav {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 20vw;
+		background-color: #fffffffb;
+		z-index: 100;
+		padding: 10vw;
+		width: 80vw;
+		height: 100vh;
+		box-sizing: border-box;
+		transform: translateX(100%);
+		transition: transform 0.8s ease-out;
+	}
+
+	/* Se cambia el tamaño y el color de la fuente y el alineamiento. */
+	header nav ul {
+		text-align: left;
+		display: block;
+	}
+
+	header nav ul li {
+		margin: 1vh 0;
+	}
+
+	header nav ul li a {
+		font-size: 7vw;
+		color: #2c3e50;
+		padding: 0.2vh 2vw;
+	}
+
+	/* Cuando el icono del menu es seleccionado, se desplaza la barra de navegación hacia la izquierda y se cambia de color el icono y la pagina actual. */
+	header #menu:checked + .menuIcon {
+		z-index: 101;
+	}
+
+	header #menu:checked + .menuIcon img {
+		filter: none;
+	}
+
+	header #menu:checked ~ nav {
+		transform: translateX(0);
+	}
+
+	a#current {
+		border-radius: 5vw;
+		background-color: #000;
+		color: #ffffff;
+	}
+
+	/* Se cambia la disposicion del flex a columna y se descplaza la descripcion hacia abajo con un margen para ver la imagen de fondo. */
+
+	section.city {
+		flex-direction: column;
+	}
+
+	section.city .cityDesc {
+		margin: 0;
+		margin-top: 40vh;
+		font-size: 4vw;
+		text-align: center;
+	}
+
+	/* Se cambian algunos tamaños de fuente  y se eliminan los radios en cada bloque */
+	.cityText {
+		border-radius: 0;
+	}
+
+	.cityDesc a {
+		margin: 2vw auto;
+		font-size: 4.2vw;
+		border-radius: 3vw;
+		width: max-content;
+	}
+
+	/* Ahora los sitios turisticos ocupan gran parte del ancho de la ventana. */
+	.cityPlaces {
+		margin: 3vh 2vw;
+		max-width: 90vw;
+	}
+
+	.cityPlace {
+		flex: 1 0 60vw;
+		height: 60vh;
+		justify-content: end;
+		border-radius: 3vw;
+	}
+
+	.cityPlace h3 {
+		font-size: 5vw;
+	}
+
+	.cityPlace p {
+		font-size: 3.5vw;
+		height: 25vh;
+	}
+
+	/* Se configura el desplazamiento para una correcta animación. */
+	.cityPlace p,
+	.cityPlace h3 {
+		background-color: rgba(255, 255, 255, 0.7);
+		color: rgb(58, 58, 58);
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.37);
+		transform: translateY(0);
+		padding: 3vw;
+		flex-shrink: 1;
+	}
+
+	/* Cuando se selecciona un sitio se mueven los textos y se cambia el tamaño de la imagen. */
+	.cityPlace:hover {
+		flex-basis: 80vw !important;
+	}
+
+	.cityPlace:hover p,
+	.cityPlace:hover h3 {
+		transform: translateY(100vh) !important;
+	}
+
+	/* Se cambia la dirección del flexbox para ver el mapa correctamente */
+	section.location {
+		flex-direction: column;
+	}
+
+	/* Se cambian algunos tamaños de fuente y se eliminan los radios */
+	h2 {
+		font-size: 6vw;
+	}
+
+	section.location p {
+		font-size: 4vw;
+		border-radius: 0;
+		padding: 5vh 10%;
+		text-align: justify;
+	}
+
+	/* Se ajusta el ancho del mapa para que ocupe casi todo el ancho de la pantalla. */
+	.map {
+		--widthMap: 90vw;
+		width: var(--widthMap);
+	}
+
+	section.localitiesDesc {
+		margin: 1vh 0;
+	}
+
+	section.localitiesDesc ol {
+		padding: 0 3vw;
+	}
+
+	/* Se cambia el estilo de la viñeta y se ubica centrada antes de cada titulo. */
+	section.localitiesDesc ol li {
+		font-size: 6vw;
+		list-style-type: none;
+		counter-increment: inst;
+		text-align: center;
+	}
+
+	section.localitiesDesc ol li::before {
+		content: counter(inst);
+	}
+
+	/* Se siguen ajustando tamaños de fuente. */
+	section.localitiesDesc ol li h3 {
+		font-size: 4vw;
+	}
+
+	section.localitiesDesc ol li p {
+		font-size: 3.5vw;
+	}
+
+	/* Se oculta el texto del boton de volver al inicio y solo se deja el icono. */
+	a.buttonUp {
+		background-color: rgba(255, 255, 255, 0);
+		left: 85vw;
+	}
+
+	a.buttonUp span {
+		display: none;
+	}
+
+	a.buttonUp img {
+		height: 10vw;
+	}
+
+	/* Se cambian tamaños de fuente en la pagina de habitantes y se hacen más pequeñas las imagenes de la galeria para optimizar el espacio. */
+	section.people p {
+		font-size: 3.5vw;
+		text-align: justify;
+		padding: 2vh 10%;
+		margin: 0 0 3vh;
+	}
+
+	.gallery img {
+		height: 10vh;
+	}
+
+	/* Las actividades se ubican de forma vertical o en columna y se hacen las imagenes del ancho de la ventana. Tambien se ajustan tamaños de fuente. */
+	section.activitySummary p {
+		font-size: 3.5vw;
+		text-align: justify;
+		padding: 2vh 10%;
+		margin: 0 0 2vh;
+	}
+
+	article.activity {
+		flex-direction: column !important;
+	}
+
+	article.activity .textActi {
+		margin: 0 5vw;
+		border-radius: 2vw 2vw 0 0;
+		padding: 0;
+	}
+
+	.textActi h4 {
+		font-size: 4vw;
+	}
+
+	.textActi p {
+		font-size: 3vw;
+		text-shadow: none;
+	}
+
+	article.activity img {
+		width: 100vw;
+		margin-bottom: 4vh;
+	}
+
+	/* En la tabla de créditos se aumenta el tamaño de la fuente y el tamaño de la leyenda del mapa de navegación. */
+
+	.references th {
+		font-size: 3.5vw;
+	}
+
+	.references td {
+		font-size: 3vw;
+	}
+
+	.navMap figcaption {
+		font-size: 3vw;
+	}
+
+	/* Las Imagen de las epocas se ubican debajo del texto y se ajustan los tamaños de fuente */
+	.timeline .date {
+		flex-direction: column;
+		min-height: fit-content;
+		max-height: fit-content;
+		padding: 0;
+	}
+
+	/* Las imagenes de  cada época se hacen de un ancho fijo, cercano al ancho de la ventana. */
+	.date img {
+		flex: 1 0 0;
+		width: 70vw;
+		height: none;
+		margin: 0 auto;
+	}
+
+	/* Se ubica el texto al comienzo y se ajusta el tamaño de fuente. */
+	.date .timeDesc {
+		flex: 1 0 0;
+		align-items: center;
+		justify-content: flex-start;
+		padding: 0 5vw;
+	}
+
+	.timeDesc h3 {
+		font-size: 5vw;
+		text-align: center;
+		padding: 1vh 0;
+	}
+
+	.timeDesc p {
+		font-size: 3.5vw;
+		text-align: justify;
+		width: auto;
+		text-shadow: none;
+	}
+}

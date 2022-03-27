@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- Se declara el tipo de documento con un lenguaje. -->
+<html lang="es">
+	<!-- Todas las páginas tienen un head donde se encuentra la codificación de caracteres, el ícono de la página, el título de la página, las fuentes que se van a utilizar y los archivos de estilo. -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bogotá</title>
+
+		<link rel="shortcut icon" href="icon.png?v=2" type="image/x-icon" />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<!-- Contenido de la página. -->
+	<body>
+		<!-- En el encabezado de la página se agrega un título con su icono y una barra de navegación con una lista de links a otras páginas. -->
+		<header>
+			<h1>
+				<a href="index.html">
+					<img src="images/bogotaletra.png" alt="logo Bogotá" />
+					Bogotá</a
+				>
+			</h1>
+
+			<input type="checkbox" id="menu" />
+			<label for="menu" class="menuIcon">
+				<img src="images/menu.png" alt="Menú" />
+			</label>
+
+			<nav>
+				<ul>
+					<li><a href="location.html">Ubicación</a></li>
+					<li><a href="people.html">Habitantes</a></li>
+					<li><a href="activities.html">Actividades</a></li>
+					<li><a href="history.html">Historia</a></li>
+					<li><a href="interactive.html">Mapa interactivo</a></li>
+					<li><a href="references.html">Referencias</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- En el contenido de la página se agrega una sección para ubicar la descripción de Bogotá -->
+		<section class="city">
+			<article class="cityDesc">
+				<p class="cityText">
+					Bogotá, es la capital y la ciudad más grande de Colombia, tiene
+					alrededor de 8 millones de habitantes. Constituye el centro político,
+					económico, financiero y cultural del país, por lo tanto, es el punto
+					de encuentro de personas de todas las regiones, lo que la hace diversa
+					y multicultural.
+				</p>
+
+				<a href="https://bogota.gov.co/" target="_blank">Ver más</a>
+			</article>
+
+			<!-- División para ubicar algunos lugares reconocidos de Bogotá -->
+			<div class="cityPlaces">
+				<!-- Cada lugar tiene un título y una descripción -->
+				<article class="cityPlace candelaria">
+					<h3>Candelaria</h3>
+
+					<p>
+						La Candelaria está en el centro oriente de Bogotá. Abarca el centro
+						histórico: allí se fundó la ciudad el 6 de agosto de 1538. Alberga
+						la Plaza de Bolívar y la Catedral Primada de Colombia. Es un
+						importante centro turístico, educativo y comercial, además de ser el
+						nodo cultural más importante y grande de la ciudad.
+					</p>
+				</article>
+
+				<article class="cityPlace monserrate">
+					<h3>Monserrate</h3>
+
+					<p>
+						Situado a 3.152 metros de altura en los Cerros Orientales,
+						Monserrate es el lugar sagrado más visitado de Bogotá, encargado de
+						custodiar la ciudad. A él se puede llegar a pié, en teleférico o en
+						funicular. Su Santuario del Señor Caído, de gran valor religioso, es
+						visitado por miles de peregrinos católicos.
+					</p>
+				</article>
+
+				<article class="cityPlace pSimonBolivar">
+					<h3>Parque Simón Bolívar</h3>
+
+					<p>
+						Este es el más grande e importante parque de la ciudad. Está
+						estratégicamente ubicado en el corazón de Bogotá; tiene amplios
+						espacios verdes acompañados de un innumerable número de árboles y
+						cuenta con una variedad de escenarios para actividades
+						recreodeportivas y religiosas.
+					</p>
+				</article>
+
+				<article class="cityPlace plazaBolivar">
+					<h3>Plaza de Bolívar</h3>
+
+					<p>
+						Ubicada en el centro de Bogotá, la Plaza de Bolívar es la principal
+						plaza de la ciudad, siendo declarada como Monumento Nacional
+						Colombiano el 19 de octubre de 1995. Fue construida en el año de
+						1539 con el nombre de Plaza Mayor y también fue el lugar donde se
+						proclamó el Grito de Independencia el 20 de julio de 1810.
+					</p>
+				</article>
+
+				<article class="cityPlace BVirgilio">
+					<h3>Biblioteca Virgilio Barco</h3>
+
+					<p>
+						Entre los lugares que visitar en Bogotá está la biblioteca pública
+						Virgilio Barco, que está ubicada en Teusaquillo y forma parte del
+						Parque Metropolitano Simón Bolívar. Este monumento de la nación fue
+						diseñado por el arquitecto Rogelio Salmona, inaugurado en diciembre
+						del 2001 y debe su nombre al político Virgilio Barco Vargas.
+					</p>
+				</article>
+
+				<article class="cityPlace museoOro">
+					<h3>Museo del oro</h3>
+
+					<p>
+						El Museo de Oro, cerca del Parque de Santander, es un área turística
+						de Bogotá. Es conocido como banco de Colombia, encargado de
+						adquirir, preservar y exponer todas las piezas de orfebrería de la
+						cultura indígena de la era precolombina.
+					</p>
+				</article>
+
+				<article class="cityPlace chorroQuevedo">
+					<h3>Chorro de Quevedo</h3>
+
+					<p>
+						Está ubicado en el conocido barrio de La Candelaria, en una calle
+						conocida como El Callejón del Embudo. Debe su nombre a que durante
+						la fundación de Bogotá, el sacerdote Quevedo mandó a construir la
+						fuente para que los habitantes de la zona tuvieran acceso al agua.
+					</p>
+				</article>
+			</div>
+		</section>
+
+		<!-- El pie de página se agrega con la información del autor de la página. -->
+		<footer>
+			<a href="mailto:cychitivav@unal.edu.co">Cristian Yesid Chitiva Vela </a>
+			<time>2021</time>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- Se declara el tipo de documento con un lenguaje. -->
+<html lang="es">
+	<!-- Todas las páginas tienen un head donde se encuentra la codificación de caracteres, el ícono de la página, el título de la página, las fuentes que se van a utilizar y los archivos de estilo. -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bogotá</title>
+
+		<link rel="shortcut icon" href="icon.png?v=2" type="image/x-icon" />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<!-- Contenido de la página. -->
+	<body>
+		<!-- En el encabezado de la página se agrega un título con su icono y una barra de navegación con una lista de links a otras páginas. -->
+		<header>
+			<h1>
+				<a href="index.html">
+					<img src="images/bogotaletra.png" alt="logo Bogotá" />
+					Bogotá</a
+				>
+			</h1>
+
+			<input type="checkbox" id="menu" />
+			<label for="menu" class="menuIcon">
+				<img src="images/menu.png" alt="Menú" />
+			</label>
+
+			<!-- El link de la página actual tiene un identificador para estilizar. -->
+			<nav>
+				<ul>
+					<li><a href="location.html">Ubicación</a></li>
+					<li><a href="people.html">Habitantes</a></li>
+					<li><a href="activities.html" id="current">Actividades</a></li>
+					<li><a href="history.html">Historia</a></li>
+					<li><a href="interactive.html">Mapa interactivo</a></li>
+					<li><a href="references.html">Referencias</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Titulo para identificar el contenido de la página. -->
+		<h2>Actividades</h2>
+
+		<!-- La primera sección tiene un resumen o introduccion a las actividades de Bogotá. -->
+		<section class="activitySummary">
+			<p>
+				Bogotá es una ciudad emocionante con una vida cultural muy
+				diversificada. Cada vez que vienes a la ciudad encontraras un festival
+				de teatro, un concierto de jazz, un importante grupo de música pop
+				internacional y más. Algunos eventos importantes en Bogotá son:
+			</p>
+		</section>
+
+		<!-- Cada actividad tiene una descripción y una imagen de identificación. -->
+		<article class="activity">
+			<!-- El texto se agrupa para estilizar. -->
+			<div class="textActi">
+				<h4>Feria del libro</h4>
+				<p>
+					La Feria Internacional del Libro de Bogotá es un evento en el que se
+					reúnen expositores de la industria del libro provenientes de todo el
+					mundo, pero principalmente de Iberoamérica, que se lleva a cabo
+					anualmente en el centro de exposiciones Corferias en la ciudad de
+					Bogotá, capital de Colombia.
+				</p>
+			</div>
+
+			<img
+				src="images/activities/feria-libro.jpg"
+				alt="Feria internacional del libro."
+			/>
+		</article>
+
+		<article class="activity">
+			<div class="textActi">
+				<h4>Rock al parque</h4>
+				<p>
+					Rock al Parque fue un festival internacional de rock que se llevaba a
+					cabo en la ciudad de Bogotá, Colombia, desde el año 1994 hasta el año
+					2019, debido a la pandemia del COVID-19 se cancelo definitivamente por
+					parte de la administración distrital ya que se consideró como un
+					riesgo para la salud pública.
+				</p>
+			</div>
+
+			<img
+				src="images/activities/rock-al-parque-continua.jpg"
+				alt="Rock al parque."
+			/>
+		</article>
+
+		<article class="activity">
+			<div class="textActi">
+				<h4>Festival Estéreo Picnic</h4>
+				<p>
+					El Estéreo Picnic es un festival musical alternativo y de
+					entretenimiento cultural que se realiza cada año en la ciudad de
+					Bogotá, Colombia
+				</p>
+			</div>
+
+			<img
+				src="images/activities/ESTEREO-PICNIC.png"
+				alt="Festival Estereo Picnic"
+			/>
+		</article>
+
+		<article class="activity">
+			<div class="textActi">
+				<h4>Festival de Verano</h4>
+				<p>
+					El Festival de verano de Bogotá se realiza cada año desde 1997 e
+					incluye actividades culturales, deportivas y recreativas. A lo largo
+					del circuito de Parques de Bogotá se organizan en agosto actividades
+					para la comunidad bogotan
+				</p>
+			</div>
+
+			<img
+				src="images/activities/festival-verano.jpeg"
+				alt="Festival de Verano"
+			/>
+		</article>
+		
+		<!-- El pie de página se agrega con la información del autor de la página. -->
+		<footer>
+			<a href="mailto:cychitivav@unal.edu.co">Cristian Yesid Chitiva Vela </a>
+			<time>2021</time>
+		</footer>
+	</body>
+</html>
